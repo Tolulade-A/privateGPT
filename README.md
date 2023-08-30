@@ -81,13 +81,26 @@ Run the following command to ingest all the data.
 Output should look like this:
 
 ```shell
+Downloading (…)e9125/.gitattributes: 100% 1.18k/1.18k [00:00<00:00, 3.88MB/s]
+Downloading (…)_Pooling/config.json: 100% 190/190 [00:00<00:00, 953kB/s]
+Downloading (…)7e55de9125/README.md: 100% 10.6k/10.6k [00:00<00:00, 27.9MB/s]
+Downloading (…)55de9125/config.json: 100% 612/612 [00:00<00:00, 2.18MB/s]
+Downloading (…)ce_transformers.json: 100% 116/116 [00:00<00:00, 439kB/s]
+Downloading (…)125/data_config.json: 100% 39.3k/39.3k [00:00<00:00, 9.70MB/s]
+Downloading pytorch_model.bin: 100% 90.9M/90.9M [00:00<00:00, 92.2MB/s]
+Downloading (…)nce_bert_config.json: 100% 53.0/53.0 [00:00<00:00, 216kB/s]
+Downloading (…)cial_tokens_map.json: 100% 112/112 [00:00<00:00, 341kB/s]
+Downloading (…)e9125/tokenizer.json: 100% 466k/466k [00:00<00:00, 7.92MB/s]
+Downloading (…)okenizer_config.json: 100% 350/350 [00:00<00:00, 1.34MB/s]
+Downloading (…)9125/train_script.py: 100% 13.2k/13.2k [00:00<00:00, 35.7MB/s]
+Downloading (…)7e55de9125/vocab.txt: 100% 232k/232k [00:00<00:00, 8.82MB/s]
+Downloading (…)5de9125/modules.json: 100% 349/349 [00:00<00:00, 1.22MB/s]
 Creating new vectorstore
-Loading documents from source_documents
-Loading new documents: 100%|██████████████████████| 1/1 [00:01<00:00,  1.73s/it]
-Loaded 1 new documents from source_documents
-Split into 90 chunks of text (max. 500 tokens each)
+Loading documents from /content/privateGPT/source_documents
+Loading new documents: 100%|█████████████████████| 1/1 [00:00<00:00, 135.57it/s]
+Loaded 1 new documents from /content/privateGPT/source_documents
+Split into 91 chunks of text (max. 500 tokens each)
 Creating embeddings. May take some minutes...
-Using embedded DuckDB with persistence: data will be stored in: db
 Ingestion complete! You can now run privateGPT.py to query your documents
 ```
 
