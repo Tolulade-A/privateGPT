@@ -1,7 +1,7 @@
 # privateGPT
 Interact privately with your documents on Google Colab using the power of GPT, 100% privately, no data leaks - Modified for Google Colab /Cloud Notebooks
 
-I modified this script when I ran into memory limitations on my personal machine, I realised other folks might face this same issue. This repo will guide you on how you can re-create a private LLM using the power of GPT.
+I modified this script when I ran into memory limitations on my personal machine, I realised other folks might face this same issue. This repo will guide you on how you can re-create a private LLM using the power of GPT. [Explainer Video](https://youtu.be/vxUdJO0MoT0)
 
 Inspired by the works of [imartinez](https://github.com/imartinez/privateGPT)
 
