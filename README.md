@@ -52,7 +52,7 @@ Note: because of the way `langchain` loads the `SentenceTransformers` embeddings
 This repo uses a [state of the union transcript](https://github.com/imartinez/privateGPT/blob/main/source_documents/state_of_the_union.txt) as an example.
 
 ### Additional test dataset
-I added this dataset on "Business Analytics textbook" to my project and it worked fine, though cleaning is needed on the output like in the case of ChatGPT.
+I added this dataset on ["Business Analytics textbook"](https://github.com/Tolulade-A/privateGPT/blob/main/source_documents/Essentials-of-Business-Analytics%20(1).pdf) to my project and it worked fine, though cleaning is needed on the output like in the case of ChatGPT.
 
 ```
 Enter a query: explain data visualisation to me
