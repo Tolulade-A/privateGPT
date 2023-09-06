@@ -51,6 +51,72 @@ Note: because of the way `langchain` loads the `SentenceTransformers` embeddings
 ## Test dataset
 This repo uses a [state of the union transcript](https://github.com/imartinez/privateGPT/blob/main/source_documents/state_of_the_union.txt) as an example.
 
+### Additional test dataset
+I added this dataset on "Business Analytics textbook" to my project and it worked fine, though cleaning is needed on the output like in the case of ChatGPT.
+
+```
+Enter a query: explain data visualisation to me
+ Data visualization refers to a way for people and machines to communicate information through graphical representations, such as charts or graphs that show trends, patterns, relationships between variables, and other important insights. It is an essential tool in many fields of science, engineering, business, economics, medicine, education, government, military, law enforcement, sports, entertainment, media, marketing, advertising, public relations, human resources management, finance, accounting, auditing, risk analysis, data mining, artificial intelligence and machine learning (unsuperseded in this chapter and supervised in next) models.
+
+Visualizations can be used to communicate complex information quickly and easily, making it easier for people with different backgrounds or levels of expertise to understand the same concept. They are also useful when working on large datasets that may not fit into memory at once, as they allow users to explore subsets of data in real-time without having to load everything onto their computer first.
+
+Visualizations can be created using a variety of tools and techniques, including bar charts, line graphs, scatter plots, heat maps, pie charts, stacked columns, time series analysis, network diagrams, flowcharts, mind maps, concept maps, decision trees, neural networks, support vector machines (SVMs), k
+
+> Question:
+explain data visualisation to me
+
+> Answer (took 7163.81 s.):
+ Data visualization refers to a way for people and machines to communicate information through graphical representations, such as charts or graphs that show trends, patterns, relationships between variables, and other important insights. It is an essential tool in many fields of science, engineering, business, economics, medicine, education, government, military, law enforcement, sports, entertainment, media, marketing, advertising, public relations, human resources management, finance, accounting, auditing, risk analysis, data mining, artificial intelligence and machine learning (unsuperseded in this chapter and supervised in next) models.
+
+Visualizations can be used to communicate complex information quickly and easily, making it easier for people with different backgrounds or levels of expertise to understand the same concept. They are also useful when working on large datasets that may not fit into memory at once, as they allow users to explore subsets of data in real-time without having to load everything onto their computer first.
+
+Visualizations can be created using a variety of tools and techniques, including bar charts, line graphs, scatter plots, heat maps, pie charts, stacked columns, time series analysis, network diagrams, flowcharts, mind maps, concept maps, decision trees, neural networks, support vector machines (SVMs), k
+
+> /content/privateGPT/source_documents/Essentials-of-Business-Analytics (1).pdf:
+5
+Summary and Further Reading
+As stated above, a single chapter is far too little space to describe the intricacies of
+data visualization. Few (2009) and Tufte and Graves-Morris (1983) are good sources
+with which to broaden your knowledge of the “whys” of data visualization.
+Exercises
+Ex. 5.1 Answer the following conceptual questions:
+(a) What is the key issue with using 3D graphs?
+(b) When displaying differences in a single data dimension, explain why using
+
+> /content/privateGPT/source_documents/Essentials-of-Business-Analytics (1).pdf:
+Chapter 5
+Data Visualization
+John F. Tripp
+1
+Introduction
+Data analytics is a burgeoning ﬁeld—with methods emerging quickly to explore
+and make sense of the huge amount of information that is being created every
+day. However, with any data set or analysis result, the primary concern is in
+communicating the results to the reader. Unfortunately, human perception is not
+optimized to understand interrelationships between large (or even moderately
+
+> /content/privateGPT/source_documents/Essentials-of-Business-Analytics (1).pdf:
+4
+S. Seshadri
+Data Visualization: This chapter discusses how data is visualized and the way
+that visualization can be used to aid in analysis. It starts by explaining that humans
+use visuals to understand information, and that using visualizations incorrectly can
+lead to mistaken conclusions. It discusses the importance of visualization as a
+cognitive aid and the importance of working memory in the brain. It emphasizes
+the role of data visualization in reducing the load on the reader.
+
+> /content/privateGPT/source_documents/Essentials-of-Business-Analytics (1).pdf:
+machine learning (unsupervised in this chapter and supervised in next) models.
+Visualizations
+Machine learning is really the art of marrying our understanding of the data, our
+appreciation for domain knowledge, and our command on the algorithms that are
+available to us. Here we will explore the power of simple visualizations that reveal
+a lot about the nuances in the data. This is the essential ﬁrst step in any data science
+
+Enter a query: 
+```
+
+
 ## Instructions for ingesting your own dataset
 
 Put any and all your files into the `source_documents` directory
