@@ -2,8 +2,6 @@
 
 The aim of this project is to interact privately with your documents using the power of GPT, 100% privately, no data leaks - Modified for Google Colab /Cloud Notebooks.
 
-I'm happy to share this at Devfest Lagos 2023!
-
 ---
 
 **Why Google Colab?**
@@ -58,7 +56,7 @@ TARGET_SOURCE_CHUNKS: The amount of chunks (sources) that will be used to answer
 Note: because of the way `langchain` loads the `SentenceTransformers` embeddings, the first time you run the script it will require internet connection to download the embeddings model itself.
 
 ## Test dataset
-This repo uses a [Data Visualisation guides](https://) as an example.
+This repo uses a [Data Visualisation guides](https://github.com/Tolulade-A/privateGPT/blob/main/source_documents/Data%20Visualisation%20chart%20guides%20for%20beginners.pdf) as an example.
 
 ### Additional test dataset
 I added this dataset on ["Business Analytics textbook"](https://github.com/Tolulade-A/privateGPT/blob/main/source_documents/Essentials-of-Business-Analytics%20(1).pdf) to my project and it worked fine, though cleaning is needed on the output like in the case of ChatGPT.
