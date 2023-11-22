@@ -1,11 +1,20 @@
-# privateGPT
-Interact privately with your documents on Google Colab using the power of GPT, 100% privately, no data leaks - Modified for Google Colab /Cloud Notebooks
+# privateChatGPT for Google Colab
 
-I modified this script when I ran into memory limitations on my personal machine, I realised other folks might face this same issue. This repo will guide you on how you can re-create a private LLM using the power of GPT. [Explainer Video](https://youtu.be/vxUdJO0MoT0)
+The aim of this project is to interact privately with your documents using the power of GPT, 100% privately, no data leaks - Modified for Google Colab /Cloud Notebooks.
 
-Inspired by the works of [imartinez](https://github.com/imartinez/privateGPT)
+I'm happy to share this at Devfest Lagos 2023!
 
-In the original version, you could ask questions to your documents without an internet connection, using the power of LLMs. 100% private, no data leaves your execution environment at any point. You can ingest documents and ask questions without an internet connection! But this version uses Google Colab.
+---
+
+**Why Google Colab?**
+
+LLM, large language models have become an interesting area of tech lately. While working on a project, I faced one issue, storage space in my local disk. I had to figure out an alternative. Google Colab worked well for me.
+
+I realised other folks might face this same issue. This repo will guide you on how to; re-create a private LLM using the power of GPT. [Explainer Video](https://youtu.be/vxUdJO0MoT0).
+
+
+---
+In the original version by Imartinez, you could ask questions to your documents without an internet connection, using the power of LLMs. 100% private, no data leaves your execution environment at any point. You can ingest documents and ask questions without an internet connection! But this version uses Google Colab.
 
 Built with [LangChain](https://github.com/hwchase17/langchain), [GPT4All](https://github.com/nomic-ai/gpt4all), [LlamaCpp](https://github.com/ggerganov/llama.cpp), [Chroma](https://www.trychroma.com/) and [SentenceTransformers](https://www.sbert.net/).
 
@@ -49,28 +58,22 @@ TARGET_SOURCE_CHUNKS: The amount of chunks (sources) that will be used to answer
 Note: because of the way `langchain` loads the `SentenceTransformers` embeddings, the first time you run the script it will require internet connection to download the embeddings model itself.
 
 ## Test dataset
-This repo uses a [state of the union transcript](https://github.com/imartinez/privateGPT/blob/main/source_documents/state_of_the_union.txt) as an example.
+This repo uses a [Data Visualisation guides](https://) as an example.
 
 ### Additional test dataset
 I added this dataset on ["Business Analytics textbook"](https://github.com/Tolulade-A/privateGPT/blob/main/source_documents/Essentials-of-Business-Analytics%20(1).pdf) to my project and it worked fine, though cleaning is needed on the output like in the case of ChatGPT.
 
 ```
-Enter a query: explain data visualisation to me
- Data visualization refers to a way for people and machines to communicate information through graphical representations, such as charts or graphs that show trends, patterns, relationships between variables, and other important insights. It is an essential tool in many fields of science, engineering, business, economics, medicine, education, government, military, law enforcement, sports, entertainment, media, marketing, advertising, public relations, human resources management, finance, accounting, auditing, risk analysis, data mining, artificial intelligence and machine learning (unsuperseded in this chapter and supervised in next) models.
-
-Visualizations can be used to communicate complex information quickly and easily, making it easier for people with different backgrounds or levels of expertise to understand the same concept. They are also useful when working on large datasets that may not fit into memory at once, as they allow users to explore subsets of data in real-time without having to load everything onto their computer first.
-
-Visualizations can be created using a variety of tools and techniques, including bar charts, line graphs, scatter plots, heat maps, pie charts, stacked columns, time series analysis, network diagrams, flowcharts, mind maps, concept maps, decision trees, neural networks, support vector machines (SVMs), k
 
 > Question:
 explain data visualisation to me
 
 > Answer (took 7163.81 s.):
- Data visualization refers to a way for people and machines to communicate information through graphical representations, such as charts or graphs that show trends, patterns, relationships between variables, and other important insights. It is an essential tool in many fields of science, engineering, business, economics, medicine, education, government, military, law enforcement, sports, entertainment, media, marketing, advertising, public relations, human resources management, finance, accounting, auditing, risk analysis, data mining, artificial intelligence and machine learning (unsuperseded in this chapter and supervised in next) models.
+ Data visualization refers to a way for people and machines to communicate information through graphical representations, such as charts or graphs that show trends, patterns, relationships between variables, and other important insights. It is an essential tool in many fields of science, engineering, business, economics, medicine, education, government, military, law enforcement, sports, entertainment...
 
-Visualizations can be used to communicate complex information quickly and easily, making it easier for people with different backgrounds or levels of expertise to understand the same concept. They are also useful when working on large datasets that may not fit into memory at once, as they allow users to explore subsets of data in real-time without having to load everything onto their computer first.
+Visualizations can be used to communicate complex information quickly and easily, making it easier for people with different backgrounds or levels of expertise to understand the same concept...
 
-Visualizations can be created using a variety of tools and techniques, including bar charts, line graphs, scatter plots, heat maps, pie charts, stacked columns, time series analysis, network diagrams, flowcharts, mind maps, concept maps, decision trees, neural networks, support vector machines (SVMs), k
+Visualizations can be created using a variety of tools and techniques, including bar charts, line graphs, scatter plots... k
 
 > /content/privateGPT/source_documents/Essentials-of-Business-Analytics (1).pdf:
 5
@@ -105,13 +108,6 @@ lead to mistaken conclusions. It discusses the importance of visualization as a
 cognitive aid and the importance of working memory in the brain. It emphasizes
 the role of data visualization in reducing the load on the reader.
 
-> /content/privateGPT/source_documents/Essentials-of-Business-Analytics (1).pdf:
-machine learning (unsupervised in this chapter and supervised in next) models.
-Visualizations
-Machine learning is really the art of marrying our understanding of the data, our
-appreciation for domain knowledge, and our command on the algorithms that are
-available to us. Here we will explore the power of simple visualizations that reveal
-a lot about the nuances in the data. This is the essential ﬁrst step in any data science
 
 Enter a query: 
 ```
@@ -191,7 +187,6 @@ And wait for the script to require your input.
 
 Hit enter. You'll need to wait for seconds-minutes (mine took 2670.53 s) while the LLM model consumes the prompt and prepares the answer. Once done, it will print the answer and the 4 sources it used as context from your documents; you can then ask another question without re-running the script, just wait for the prompt again.
 
-Note: you could turn off your internet connection, and the script inference would still work. No data gets out of your local environment.
 
 Type `exit` to finish the script or simply interrupt in the case of Google Colab.
 
@@ -212,6 +207,8 @@ Selecting the right local models and the power of `LangChain` you can run the en
 ## Python Version
 To use this software, you must have Python 3.10 or later installed. Earlier versions of Python will not compile.
 
+## Credits
+Inspired by the works of [imartinez](https://github.com/imartinez/privateGPT)
 
 # Disclaimer
 This is a test project to validate the feasibility of a fully private solution for question answering using LLMs and Vector embeddings. It is not production ready, and it is not meant to be used in production. The models selection is not optimized for performance, but for privacy; but it is possible to use different models and vectorstores to improve performance.
